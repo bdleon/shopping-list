@@ -25,5 +25,25 @@ const mustard = {
 }
 
 
-groceryList.push(eggs,milk,mustard);
-console.log(groceryList);
+groceryList.push(eggs);
+groceryList.push(milk);
+groceryList.push(mustard);
+
+
+const pickles = {
+    name: 'pickles',
+    price: 9
+}
+
+const addToShoppingList = (grocery)=>{
+    const lastIndex = groceryList.length -1;
+    const lastGroceryObject = groceryList[lastIndex]
+    const maxId  = lastGroceryObject.id
+    const idForNewGrocery = maxId +1
+   
+    grocery.id = idForNewGrocery
+    groceryList.push(grocery)
+}
+
+addToShoppingList(pickles)
+console.log(groceryList)
