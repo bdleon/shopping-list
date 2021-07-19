@@ -46,4 +46,11 @@ const addToShoppingList = (grocery)=>{
 }
 
 addToShoppingList(pickles)
-console.log(groceryList)
+//console.log(groceryList)
+
+for (const priority of groceryList) {
+    if(priority.price >= 8){
+        console.log(`The priority items are ${priority.name} and costs: ${priority.price}`)
+    }
+    
+}
